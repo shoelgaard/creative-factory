@@ -87,13 +87,12 @@ def build_script(
         lines.append(brief.cta.strip())
 
     if not lines:
-        # Minimal default — used when caller wants the flow to fail loudly at
-        # the dialogue gate rather than silently producing slop.
-        lines = [
-            f"Jeg har lige fundet mit nye yndlingslys.",
-            f"{brief.product} fra {brand.name} er bare … præcis det jeg havde brug for.",
-            f"Den lyser stille, dufter rent, og holder hele aftenen.",
-        ]
+        # Hard fail. We never auto-generate copy — the user writes the words.
+        raise ValueError(
+            "Empty script: brief has no hook/beats/cta. "
+            "Fill in briefs/<brand>/<file>.yaml or pass --hook/--beats/--cta. "
+            "I do not auto-write copy."
+        )
 
     text = " ".join(lines)
     word_count = sum(len(ln.split()) for ln in lines)

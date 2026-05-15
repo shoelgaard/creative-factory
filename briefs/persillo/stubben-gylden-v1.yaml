@@ -1,15 +1,16 @@
-# Persillo Stubben Gylden — first UGC test brief
-# v1 - 2026-05-15
+# Persillo Stubben Gylden — UGC brief template
+# Du fylder ud. Jeg renderer.
 
 brand: persillo
 product: Stubben Gylden
 persona: female-adult
 
-hook: "Det her lys ved hvornår dagen slutter"
+# Første linje, max ~15 ord. Stopper scrollen.
+hook: ""
 
+# 1-3 linjer hun siger efter hooket. Skriv som du selv ville sige det.
 beats:
-  - "Jeg tænder den når børnene er i seng, og jeg får den der ene time for mig selv"
-  - "Den dufter ikke af noget — bare ren bivoks, varm og helt rolig"
-  - "Lyset er bare så blødt, at hele stuen ligesom trækker vejret"
+  - ""
 
-cta: "Den hedder Stubben i gylden, fra Persillo"
+# Bløde close-linje. Implicit (bare produktnavn) er fint.
+cta: ""
