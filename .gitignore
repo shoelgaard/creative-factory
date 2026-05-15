@@ -1,0 +1,10 @@
+.env
+.env.local
+output/
+references/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.vscode/
+.idea/
