@@ -218,9 +218,9 @@ cf <flow> <command> [options]
 
 Commands every flow must support:
 
-- `cf <flow> gen --brand <slug> [...]` — produce output
-- `cf <flow> describe` — print flow.yaml + brief schema
-- `cf <flow> estimate --brand <slug> [...]` — return projected cost before running
+- `cf <flow> gen --brand <slug> [...]` — produce output. `--brand` is **required**; CLI exits with error if missing.
+- `cf <flow> describe` — print flow.yaml + brief schema (no brand needed)
+- `cf <flow> estimate --brand <slug> [...]` — return projected cost before running. `--brand` is **required**.
 
 Platform-level commands:
 
@@ -391,7 +391,7 @@ Then `feat/ugc` adds the UGC flow against `engines/arcads` (new engine, new flow
 
 3. **Versioning scheme.** Proposed: flows and engines use semver in their `.yaml`. The platform itself uses date-based tags (`v2026-05-15`) cut whenever main is in a known-good state.
 
-4. **Default brand selection.** When `cf editorial gen` is called without `--brand`, should it default to `persillo` (since that's currently the only brand)? Proposed: yes, configurable in platform-level `MASTER_CONTEXT.md`.
+4. **Default brand selection.** ~~When `cf editorial gen` is called without `--brand`, should it default to `persillo`?~~ **Decided 2026-05-15: NO.** `--brand` is required on every `gen` and `estimate` call. Rationale: an ad produced for the wrong brand is worse than the friction of typing four characters. The CLI hard-fails with a clear message if `--brand` is missing.
 
 ---
 
