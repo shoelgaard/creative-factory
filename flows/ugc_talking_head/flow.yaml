@@ -1,0 +1,51 @@
+name: ugc-talking-head
+display_name: UGC talking-head
+version: 0.1.0
+description: >
+  Pre-cast Arcads actor delivers a brand-voiced script to camera, UGC-style.
+  No product on camera — the product is the subject the actor talks about.
+  First flow for Persillo's UGC ad track.
+
+engines:
+  - arcads
+
+brief_schema: brief.schema.yaml
+
+cli:
+  command: cf ugc gen
+  skill_trigger: /ugc
+
+inputs:
+  - name: brand
+    required: true
+    type: slug
+  - name: product
+    required: true
+    type: string
+    description: Product name within the brand (e.g. "Stubben Gylden")
+  - name: persona
+    required: false
+    type: enum
+    choices: [auto, female-adult, female-young-adult, male-adult]
+    default: auto
+    description: >
+      Coarse persona selector. 'auto' uses the cached default for the brand
+      (set in brands/<slug>/MASTER_CONTEXT.md). For Persillo: female-adult.
+  - name: hook
+    required: false
+    type: string
+    description: First-line attention-grabber (max ~15 words).
+  - name: beats
+    required: false
+    type: list[string]
+    description: 1-3 sentences the actor should say after the hook.
+  - name: cta
+    required: false
+    type: string
+    description: Soft close line. Default for Persillo is implicit (product name).
+  - name: brief_file
+    required: false
+    type: path
+    description: YAML file containing all of the above. Mutually exclusive with the inline fields.
+
+# Multi-scene support arrives later. v0.1 produces ONE talking-head clip per call.

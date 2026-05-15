@@ -1,0 +1,22 @@
+# UGC talking-head brief schema (v0.1)
+# Flat YAML, no nested structures yet. Plain text only.
+
+required:
+  - brand
+  - product
+
+optional:
+  - persona     # auto | female-adult | female-young-adult | male-adult
+  - hook        # one-line attention grabber, max ~15 words
+  - beats       # list of 1-3 lines after the hook
+  - cta         # closing line. Implicit (just product name) is fine.
+
+example: |
+  brand: persillo
+  product: Stubben Gylden
+  persona: female-adult
+  hook: "Det her lys ved hvornår dagen slutter"
+  beats:
+    - "Jeg tænder den når børnene er i seng og jeg får en time for mig selv"
+    - "Den dufter ikke som de andre — bare ren bivoks, varm og rolig"
+  cta: "Den hedder Stubben i gylden, fra Persillo"

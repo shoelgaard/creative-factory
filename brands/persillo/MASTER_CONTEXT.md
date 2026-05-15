@@ -10,6 +10,7 @@ Distinct from `brand.md`, which is the durable visual + motion DNA.
 - `default_engine`: veo3
 - `default_aspect`: 9:16
 - `default_duration`: 8
+- `ugc_default_persona`: female-adult
 - `max_cost_per_run_usd`: 2.50
 - `max_cost_per_day_usd`: 25.00
 

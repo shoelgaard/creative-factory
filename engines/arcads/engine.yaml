@@ -1,0 +1,60 @@
+name: arcads
+version: 0.1.0
+description: >
+  Wrapper around Arcads' external API. Currently supports the actor pipeline
+  (/v1/scripts → /v1/scripts/{id}/generate → poll /v1/scripts/{id}/videos)
+  which uses pre-cast real actors for UGC talking-head video.
+
+base_url: https://external-api.arcads.ai
+docs_url: https://external-api.arcads.ai/docs
+
+auth:
+  method: basic
+  preferred:
+    env: ARCADS_BASIC_AUTH
+    header: "Authorization: {value}"     # value should already be 'Basic <base64>'
+  fallback:
+    env: ARCADS_API_KEY
+    note: "Used as Basic username with empty password. Some accounts get 403; prefer ARCADS_BASIC_AUTH."
+
+endpoints:
+  - id: list_actors
+    method: GET
+    path: /v1/actors
+    filters: [gender, age, skinTone, freeSpeech]
+  - id: list_situations
+    method: GET
+    path: /v1/situations
+    filters: [actorGender, actorAge, talkingActorEnabled]
+  - id: list_voices
+    method: GET
+    path: /v1/voices
+    filters: [gender, language]
+  - id: list_products
+    method: GET
+    path: /v1/products
+  - id: create_folder
+    method: POST
+    path: /v1/folders
+  - id: create_project
+    method: POST
+    path: /v1/projects
+  - id: create_script
+    method: POST
+    path: /v1/scripts
+  - id: generate_script
+    method: POST
+    path: /v1/scripts/{scriptId}/generate
+  - id: list_script_videos
+    method: GET
+    path: /v1/scripts/{scriptId}/videos
+
+quirks:
+  - "Actor language is NOT a filter on /v1/actors. Language comes from the chosen voice — must probe /v1/voices for Danish availability."
+  - "Actor pipeline aspect/duration/resolution are fixed by the situation preset. You don't pass them."
+  - "Per-second credit rate for actor pipeline is not published. Log creditsCharged from first call and start using historical median."
+  - "422 on /generate = blocked actor, empty videos[], or insufficient credits. Distinguish in error handling."
+  - "Multi-scene scripts = multiple entries in videos[]; each renders independently."
+
+used_by:
+  - ugc-talking-head

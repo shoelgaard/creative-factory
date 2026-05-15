@@ -35,6 +35,7 @@ from shared.cost_estimator import estimate
 from shared.gates import CreditEstimate, credit_gate
 from shared.run_log import RunEntry, append_run, now_iso, read_all
 from flows.editorial_cinematic.prompt_builder import build_prompt  # type: ignore
+from flows.ugc_talking_head.render import cmd_ugc_gen  # type: ignore
 
 
 # Engine name (CLI flag) → (engine directory, default model id)
@@ -376,10 +377,17 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         "needed for seedance2 engine; ignore if you only use veo3",
         required=False,
     )
+    check(
+        "ARCADS_BASIC_AUTH or ARCADS_API_KEY set (optional)",
+        bool(os.environ.get("ARCADS_BASIC_AUTH") or os.environ.get("ARCADS_API_KEY")),
+        "needed for ugc-talking-head flow. Copy 'Basic <base64>' from app.arcads.ai/settings/api",
+        required=False,
+    )
 
     check("flows/ exists", (ROOT / "flows").is_dir())
     check("engines/gemini-veo/client.py", (ROOT / "engines" / "gemini-veo" / "client.py").exists())
     check("engines/fal/client.py", (ROOT / "engines" / "fal" / "client.py").exists())
+    check("engines/arcads/client.py", (ROOT / "engines" / "arcads" / "client.py").exists())
     check("brands/persillo/brand.md", (ROOT / "brands" / "persillo" / "brand.md").exists())
     check("logs/ ledger present", (ROOT / "logs").is_dir())
 
@@ -403,6 +411,28 @@ def build_parser() -> argparse.ArgumentParser:
     e_gen.add_argument("--aspect", default="9:16", choices=["9:16", "16:9", "1:1"])
     e_gen.add_argument("--duration", type=int, default=8, choices=[4, 6, 8])
     e_gen.set_defaults(func=cmd_editorial_gen)
+
+    # cf ugc gen
+    ugc = flow_sub.add_parser("ugc", help="UGC talking-head flow (Arcads pre-cast actors)")
+    u_sub = ugc.add_subparsers(dest="cmd", required=True)
+    u_gen = u_sub.add_parser("gen", help="Generate a UGC talking-head clip.")
+    u_gen.add_argument("--brand", required=True, help="Brand slug. REQUIRED.")
+    u_gen.add_argument("--product", default=None, help="Product name within the brand.")
+    u_gen.add_argument(
+        "--persona",
+        default="auto",
+        choices=["auto", "female-adult", "female-young-adult", "male-adult"],
+    )
+    u_gen.add_argument("--hook", default=None)
+    u_gen.add_argument("--beats", nargs="*", default=None, help="One or more 'beat' lines after the hook.")
+    u_gen.add_argument("--cta", default=None)
+    u_gen.add_argument(
+        "--brief-file",
+        dest="brief_file",
+        default=None,
+        help="YAML brief file (alternative to inline --hook/--beats/--cta).",
+    )
+    u_gen.set_defaults(func=cmd_ugc_gen)
 
     # cf list
     lst = flow_sub.add_parser("list", help="List installed flows, engines, brands.")
