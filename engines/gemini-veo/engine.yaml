@@ -1,0 +1,44 @@
+name: gemini-veo
+version: 0.1.0
+description: Direct Veo 3 image-to-video via Google's Gemini long-running API.
+
+base_url: https://generativelanguage.googleapis.com/v1beta
+auth:
+  method: api_key
+  env: GEMINI_API_KEY
+  header: x-goog-api-key
+
+models:
+  - id: veo-3.1-generate-preview        # default
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [4, 6, 8]
+    person_generation: "allow_adult"
+    audio: native
+  - id: veo-3.0-generate-001
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [4, 6, 8]
+    person_generation: "allow_adult"
+    audio: native
+  - id: veo-3.0-fast-generate-001       # cheaper
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [4, 6, 8]
+    person_generation: "allow_adult"
+    audio: native
+  - id: veo-3.1-fast-generate-preview
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [4, 6, 8]
+    person_generation: "allow_adult"
+    audio: native
+  - id: veo-3.1-lite-generate-preview
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [4, 6, 8]
+    person_generation: "allow_adult"
+    audio: native
+
+quirks:
+  - "veo-3.0-generate-preview (preview suffix on 3.0) returns 404. Use 3.1 or 3.0-generate-001."
+  - "personGeneration: only 'allow_adult' works on 3.1 ('allow_all' and 'dont_allow' rejected)."
+  - "Transient operation errors code 8/14 happen under load. Wrapper retries 3x with 30/60/120s backoff."
+
+used_by:
+  - editorial-cinematic

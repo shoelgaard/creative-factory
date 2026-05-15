@@ -13,7 +13,7 @@ from __future__ import annotations
 import pathlib
 from dataclasses import dataclass
 
-from .brand_loader import Brand
+from shared.brand_loader import Brand
 
 
 @dataclass

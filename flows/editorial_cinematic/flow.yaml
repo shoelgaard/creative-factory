@@ -1,0 +1,50 @@
+# Editorial cinematic flow.
+# 8-second cinematic product film from a single reference image.
+# Aesthetic: Kinfolk / Frama / Aesop. No people, no dramatic motion.
+
+name: editorial-cinematic
+display_name: Editorial cinematic
+version: 0.1.0
+description: >
+  Single-clip product film derived from one product photo. Targets editorial
+  brands (Persillo first). Slow drift, stable quiet flame, native ambient audio.
+  Output: one mp4 per engine, 8s 9:16 by default.
+
+engines:
+  - gemini-veo      # default
+  - fal             # optional side-by-side via Seedance 2.0
+
+brief_schema: brief.schema.yaml
+
+cli:
+  command: cf editorial gen
+  skill_trigger: /editorial
+
+inputs:
+  - name: image
+    required: true
+    type: path
+    description: Product reference image (jpg/png/webp)
+  - name: brand
+    required: true
+    type: slug
+    description: Brand slug, must match a folder under brands/
+  - name: engine
+    required: false
+    type: enum
+    choices: [veo3, seedance2, both]
+    default: veo3
+  - name: prompt
+    required: false
+    type: string
+    description: Optional extra steering text
+  - name: aspect
+    required: false
+    type: enum
+    choices: ["9:16", "16:9", "1:1"]
+    default: "9:16"
+  - name: duration
+    required: false
+    type: int
+    choices: [4, 6, 8]
+    default: 8
