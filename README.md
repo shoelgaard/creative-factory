@@ -3,41 +3,49 @@
 One CLI, one brief → finished ad clips. MVP-scope: Persillo only, Veo 3 + Seedance 2.0
 (image-to-video), 8-second 9:16 clips, side-by-side comparison.
 
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the four-layer design (interfaces ·
+flows · engines · brands).
+
 ## Quick start
 
 ```bash
-bash scripts/setup.sh
-# Add GEMINI_API_KEY to .env (FAL_API_KEY is optional; Veo-only runs without it)
+bash interfaces/cli/setup.sh
+# Add GEMINI_API_KEY to .env (FAL_API_KEY is optional)
 
-python3 scripts/cf.py gen \
+python3 interfaces/cli/cf.py editorial gen \
   --image references/slot1_hero.jpg \
-  --brand persillo \
-  --engine veo3
+  --brand persillo
 ```
 
-Output lands in `output/<timestamp>/<engine>/`.
+Output lands in `output/<ts>/editorial-cinematic/<brand>/run/`.
 
 ## CLI
 
 ```bash
-cf gen --image <path> --brand <slug> --engine [veo3|seedance2|both]
-       [--prompt "extra steering"] [--aspect 9:16] [--duration 8]
+cf <flow> <command> [options]
+
+cf editorial gen --image <path> --brand <slug>
+                 [--engine veo3|seedance2|both]
+                 [--prompt "..."] [--aspect 9:16] [--duration 8]
+cf list
 ```
 
-- `--engine both` runs Veo 3 and Seedance 2.0 **in parallel** and saves their
-  outputs side-by-side for direct comparison.
+- `--brand` is **required** on every `gen`. No default brand.
+- `--engine both` runs Veo 3 and Seedance 2.0 in parallel for side-by-side comparison.
 - Without `FAL_API_KEY`, seedance is skipped automatically.
 
 ## Layout
 
 ```
-brands/<slug>/brand.md     # visual DNA, do's/don'ts, motion grammar
-scripts/cf.py              # CLI router
-scripts/veo3_gen.py        # Veo 3 image-to-video via Gemini API
-scripts/seedance_gen.py    # Seedance 2.0 image-to-video via fal.ai
-scripts/lib/               # brand_loader, prompt_builder
-output/<ts>/               # generated clips + brief.json + meta.json
-references/                # product images (gitignored)
+flows/<name>/              # one per video-type
+engines/<name>/            # one per external service (Gemini-Veo, fal, etc.)
+brands/<slug>/             # one per brand (Persillo is the only active brand)
+shared/                    # brand_loader, cost_estimator, gates, output convention
+interfaces/cli/cf.py       # CLI router
+interfaces/skills/<flow>/  # Claude Code skills (/editorial, /ugc, ...)
+logs/<engine>.jsonl        # cost ledger per engine (institutional memory)
+output/<ts>/<flow>/<brand>/run/   # gitignored, finished artefacts
+references/                # gitignored, product images
 ```
 
 ## Status

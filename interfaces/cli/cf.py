@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Creative Factory CLI.
+"""Creative Factory CLI — flow router.
 
-One brief → one or two short product films per run.
+    cf <flow> <command> [options]
 
 Examples:
-    cf gen --image references/slot1_hero.jpg --brand persillo
-    cf gen --image refs/x.jpg --brand persillo --engine seedance2
-    cf gen --image refs/x.jpg --brand persillo --engine both
+    cf editorial gen --image references/slot1_hero.jpg --brand persillo
+    cf editorial gen --image refs/x.jpg --brand persillo --engine seedance2
+    cf editorial gen --image refs/x.jpg --brand persillo --engine both
+    cf list
 """
 
 from __future__ import annotations
@@ -21,14 +22,20 @@ import subprocess
 import sys
 from typing import Optional
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "scripts"))
 
-from lib.brand_loader import load_brand
-from lib.prompt_builder import build_prompt
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+
+from shared.brand_loader import load_brand
+from flows.editorial_cinematic.prompt_builder import build_prompt  # type: ignore
 
 
-ENGINE_CHOICES = ["veo3", "seedance2", "both"]
+# Engine name → engine client script
+ENGINES: dict[str, pathlib.Path] = {
+    "veo3": ROOT / "engines" / "gemini-veo" / "client.py",
+    "seedance2": ROOT / "engines" / "fal" / "client.py",
+}
+ENGINE_CHOICES = list(ENGINES.keys()) + ["both"]
 
 
 def _load_env_file(path: pathlib.Path) -> None:
@@ -47,8 +54,6 @@ def _load_env_file(path: pathlib.Path) -> None:
 
 
 def _bootstrap_env() -> None:
-    # Load .env from project root, then fall back to the Persillo .env that already
-    # holds GEMINI_API_KEY (so existing keys are reused without re-typing).
     _load_env_file(ROOT / ".env")
     persillo_env = pathlib.Path(
         os.path.expanduser(
@@ -59,6 +64,7 @@ def _bootstrap_env() -> None:
 
 
 def _run_engine(
+    name: str,
     script: pathlib.Path,
     image: pathlib.Path,
     prompt: str,
@@ -66,8 +72,6 @@ def _run_engine(
     aspect: str,
     duration: int,
 ) -> tuple[str, int, str]:
-    """Run an engine script as a subprocess; return (engine_name, returncode, stdout+stderr)."""
-    name = script.stem.replace("_gen", "")
     cmd = [
         sys.executable,
         str(script),
@@ -87,15 +91,14 @@ def _run_engine(
     return name, proc.returncode, out
 
 
-def cmd_gen(args: argparse.Namespace) -> int:
+def cmd_editorial_gen(args: argparse.Namespace) -> int:
     image = pathlib.Path(args.image).expanduser().resolve()
     if not image.exists():
         print(f"[cf] image not found: {image}", file=sys.stderr)
         return 2
 
-    brands_root = ROOT / "brands"
     try:
-        brand = load_brand(args.brand, brands_root)
+        brand = load_brand(args.brand, ROOT / "brands")
     except FileNotFoundError as exc:
         print(f"[cf] {exc}", file=sys.stderr)
         return 2
@@ -103,14 +106,15 @@ def cmd_gen(args: argparse.Namespace) -> int:
     prompts = build_prompt(brand, image, user_steer=args.prompt)
 
     ts = dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    run_dir = ROOT / "output" / ts
+    run_dir = ROOT / "output" / ts / "editorial-cinematic" / brand.slug / "run"
     run_dir.mkdir(parents=True, exist_ok=True)
 
-    # Persist the full brief
     brief_path = run_dir / "brief.json"
     brief_path.write_text(
         json.dumps(
             {
+                "flow": "editorial-cinematic",
+                "flow_version": "0.1.0",
                 "brand": brand.slug,
                 "image": str(image),
                 "engine": args.engine,
@@ -127,29 +131,20 @@ def cmd_gen(args: argparse.Namespace) -> int:
     print(f"[cf] run dir: {run_dir}")
     print(f"[cf] brief:   {brief_path}")
 
-    scripts_dir = ROOT / "scripts"
     jobs: list[tuple[str, pathlib.Path, str, pathlib.Path]] = []
     if args.engine in ("veo3", "both"):
-        jobs.append(
-            ("veo3", scripts_dir / "veo3_gen.py", prompts.veo3, run_dir / "veo3")
-        )
+        jobs.append(("veo3", ENGINES["veo3"], prompts.veo3, run_dir / "veo3"))
     if args.engine in ("seedance2", "both"):
         if not (os.environ.get("FAL_API_KEY") or os.environ.get("FAL_KEY")):
             print(
-                "[cf] FAL_API_KEY missing — seedance2 skipped. "
-                "Add it to .env to enable.",
+                "[cf] FAL_API_KEY missing — seedance2 skipped. Add it to .env to enable.",
                 file=sys.stderr,
             )
             if args.engine == "seedance2":
                 return 2
         else:
             jobs.append(
-                (
-                    "seedance2",
-                    scripts_dir / "seedance_gen.py",
-                    prompts.seedance2,
-                    run_dir / "seedance2",
-                )
+                ("seedance2", ENGINES["seedance2"], prompts.seedance2, run_dir / "seedance2")
             )
 
     if not jobs:
@@ -160,13 +155,7 @@ def cmd_gen(args: argparse.Namespace) -> int:
     with cf.ThreadPoolExecutor(max_workers=len(jobs)) as pool:
         future_map = {
             pool.submit(
-                _run_engine,
-                script,
-                image,
-                prompt,
-                out,
-                args.aspect,
-                args.duration,
+                _run_engine, name, script, image, prompt, out, args.aspect, args.duration
             ): name
             for name, script, prompt, out in jobs
         }
@@ -188,25 +177,49 @@ def cmd_gen(args: argparse.Namespace) -> int:
     return overall_rc
 
 
+def cmd_list(args: argparse.Namespace) -> int:
+    print("Flows:")
+    flows_root = ROOT / "flows"
+    for entry in sorted(flows_root.iterdir()) if flows_root.exists() else []:
+        if entry.is_dir() and (entry / "flow.yaml").exists():
+            print(f"  - {entry.name}")
+    print("\nEngines:")
+    engines_root = ROOT / "engines"
+    for entry in sorted(engines_root.iterdir()) if engines_root.exists() else []:
+        if entry.is_dir() and (entry / "engine.yaml").exists():
+            print(f"  - {entry.name}")
+    print("\nBrands:")
+    brands_root = ROOT / "brands"
+    for entry in sorted(brands_root.iterdir()) if brands_root.exists() else []:
+        if entry.is_dir() and (entry / "brand.md").exists():
+            print(f"  - {entry.name}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="cf", description="Creative Factory CLI")
-    sub = p.add_subparsers(dest="cmd", required=True)
+    flow_sub = p.add_subparsers(dest="flow", required=True)
 
-    g = sub.add_parser("gen", help="Generate ad-video(s) from a product image.")
-    g.add_argument("--image", required=True, help="Path to product reference image.")
-    g.add_argument("--brand", required=True, help="Brand slug, e.g. 'persillo'.")
-    g.add_argument(
+    # cf editorial <command>
+    editorial = flow_sub.add_parser("editorial", help="Editorial cinematic flow (Veo 3 / Seedance via fal)")
+    e_sub = editorial.add_subparsers(dest="cmd", required=True)
+    e_gen = e_sub.add_parser("gen", help="Generate cinematic clip(s) from a product image.")
+    e_gen.add_argument("--image", required=True, help="Path to product reference image.")
+    e_gen.add_argument("--brand", required=True, help="Brand slug, e.g. 'persillo'. REQUIRED.")
+    e_gen.add_argument(
         "--engine",
         default="veo3",
         choices=ENGINE_CHOICES,
         help="Which engine(s) to run. 'both' runs them in parallel.",
     )
-    g.add_argument(
-        "--prompt", default="", help="Optional extra steering for this run."
-    )
-    g.add_argument("--aspect", default="9:16", choices=["9:16", "16:9", "1:1"])
-    g.add_argument("--duration", type=int, default=8, choices=[4, 6, 8])
-    g.set_defaults(func=cmd_gen)
+    e_gen.add_argument("--prompt", default="", help="Optional extra steering for this run.")
+    e_gen.add_argument("--aspect", default="9:16", choices=["9:16", "16:9", "1:1"])
+    e_gen.add_argument("--duration", type=int, default=8, choices=[4, 6, 8])
+    e_gen.set_defaults(func=cmd_editorial_gen)
+
+    # cf list
+    lst = flow_sub.add_parser("list", help="List installed flows, engines, brands.")
+    lst.set_defaults(func=cmd_list)
 
     return p
 

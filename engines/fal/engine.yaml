@@ -1,0 +1,22 @@
+name: fal
+version: 0.1.0
+description: fal.ai queue endpoint wrapper. Currently supports Seedance 2.0 image-to-video.
+
+base_url: https://queue.fal.run
+auth:
+  method: bearer
+  env: FAL_API_KEY
+  header: "Authorization: Key <key>"
+
+models:
+  - id: fal-ai/bytedance/seedance/v1/pro/image-to-video
+    aliases: [seedance2, seedance-2.0]
+    aspect_ratios: ["9:16", "16:9", "1:1"]
+    durations: [3, 5, 7, 10]
+    resolution: 1080p
+    audio: none
+
+used_by:
+  - editorial-cinematic
+  # (later) ugc-talking-head — fal can render Seedance 2.0 b-roll directly,
+  # though Arcads also wraps Seedance for the avatar-talking case.

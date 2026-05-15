@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"
 
 echo "[cf-setup] root: $ROOT"
@@ -33,7 +33,7 @@ fi
 
 mkdir -p references output
 
-# Make CLI executable
-chmod +x scripts/cf.py scripts/veo3_gen.py scripts/seedance_gen.py 2>/dev/null || true
+# Make CLI + engine clients executable
+chmod +x interfaces/cli/cf.py engines/gemini-veo/client.py engines/fal/client.py 2>/dev/null || true
 
-echo "[cf-setup] done. Run:  python3 scripts/cf.py gen --image references/<file> --brand persillo"
+echo "[cf-setup] done. Run:  python3 interfaces/cli/cf.py editorial gen --image references/<file> --brand persillo"
