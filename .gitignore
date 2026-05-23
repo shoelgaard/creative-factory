@@ -1,7 +1,22 @@
 .env
 .env.local
 output/
-references/
+# Top-level references/ is gitignored (raw inbox).
+# Per-brand references (brands/<slug>/references/) ARE tracked — structural.
+/references/
+# Inside per-brand references, only the README.md and product.md/*.md text
+# files matter for git. Binaries (jpg/png/mp4) stay local — they live in
+# OneDrive and would bloat the repo.
+brands/*/references/**/*.jpg
+brands/*/references/**/*.jpeg
+brands/*/references/**/*.png
+brands/*/references/**/*.webp
+brands/*/references/**/*.mp4
+brands/*/winners/**/*.jpg
+brands/*/winners/**/*.jpeg
+brands/*/winners/**/*.png
+brands/*/winners/**/*.webp
+brands/*/winners/**/*.mp4
 __pycache__/
 *.pyc
 .DS_Store
