@@ -250,7 +250,12 @@ _PACK_KEYWORDS = (
 def _find_pack_refs(
     project_root: pathlib.Path, brand_slug: str, product_slug: str, variant: str
 ) -> list[pathlib.Path]:
-    """Return up to 2 package/abundance refs from the product's first variant folder."""
+    """Return the abundance/pack reference for the variant.
+
+    Only uses slot8_abundance.jpg — it's the editorial pack shot with Persillo's
+    natural prop styling. Skips vol_*.jpg (those are clean catalog shots used by
+    the website's quantity selector, not editorial reference material).
+    """
     base = project_root / "brands" / brand_slug / "references" / "products"
     family = product_slug.capitalize()
     fam_dir = base / family
@@ -261,14 +266,8 @@ def _find_pack_refs(
         variant_dir = fam_dir / "Råhvid"
     else:
         variant_dir = fam_dir / "Gylden"
-    refs = []
-    for name in ("vol_3x.jpg", "vol_1x.jpg", "slot8_abundance.jpg"):
-        p = variant_dir / name
-        if p.exists():
-            refs.append(p)
-        if len(refs) >= 2:
-            break
-    return refs
+    abundance = variant_dir / "slot8_abundance.jpg"
+    return [abundance] if abundance.exists() else []
 
 
 def build_for_concept(
