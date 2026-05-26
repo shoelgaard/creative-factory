@@ -1,0 +1,12 @@
+{
+  "id": "O2",
+  "template_ref": "single-flame-macro",
+  "variant": "Gylden",
+  "copy_mode": "external",
+  "headline": "Stille flamme",
+  "primary": "Bivoks brænder roligt og rent. Ingen sod, ingen knitren, ingen flakkende skygger. Bare en stille flamme.",
+  "description": "Grenen Gylden",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg"
+  ]
+}

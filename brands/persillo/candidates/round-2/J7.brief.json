@@ -1,0 +1,13 @@
+{
+  "id": "J7",
+  "template_ref": "frama-10off-shelf-interior",
+  "variant": "Råhvid",
+  "copy_mode": "embedded",
+  "headline": "FRI FRAGT",
+  "primary": "Hver ordre kommer fragtfrit. Bland modeller og farver indtil rabatten falder ind af sig selv i kurven.",
+  "description": "Bland Selv",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/frama__0014d__10off-shelf-interior__crop.png"
+  ]
+}

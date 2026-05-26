@@ -1,0 +1,13 @@
+{
+  "id": "N3",
+  "template_ref": "split-comparison-variants",
+  "variant": "Mixed",
+  "copy_mode": "embedded",
+  "headline": "Vælg én, eller bland",
+  "primary": "Gylden eller Råhvid koster det samme. Bland fire pakker af de varianter du vil have, og rabatten lægger sig selv på.",
+  "description": "Bland Selv",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg"
+  ]
+}

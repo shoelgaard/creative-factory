@@ -1,0 +1,13 @@
+{
+  "id": "O3",
+  "template_ref": "dinner-table-evening-wide",
+  "variant": "Mixed",
+  "copy_mode": "external",
+  "headline": "Et bord, en aften",
+  "primary": "Fem stagelys på et bord er nok. Hver brænder i 14 timer — aftenbordet får ikke ende før gæsterne går.",
+  "description": "Grenen",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "I-F1",
+  "template_ref": "frama-community-stools-interior",
+  "variant": "Råhvid",
+  "copy_mode": "external\n\n---\n\n## group j — typography-driven labels (heavy embedded copy)",
+  "headline": "En aften, fire lys",
+  "primary": "Sæt fire stagelys på bordet og lad lyset gøre arbejdet. 14 timer per lys, ingen duft, ingen drypning.",
+  "description": "Grenen Råhvid",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/frama__0035d__community-stools-interior__crop.png"
+  ]
+}

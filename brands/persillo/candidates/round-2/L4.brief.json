@@ -1,0 +1,14 @@
+{
+  "id": "L4",
+  "template_ref": "le-labo-matcha-trio-dark-wood",
+  "variant": "Mixed",
+  "copy_mode": "external",
+  "headline": "Gylden eller Råhvid",
+  "primary": "Samme rolige bivoks, samme 14 timer. Den ene varm honning, den anden kølig creme. Bland frit.",
+  "description": "Persillo Grenen",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/lelabo__0016d__matcha-trio-dark-wood__crop.png"
+  ]
+}

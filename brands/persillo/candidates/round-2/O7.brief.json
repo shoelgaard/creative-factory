@@ -1,0 +1,13 @@
+{
+  "id": "O7",
+  "template_ref": "holder-collection-mixed",
+  "variant": "Mixed",
+  "copy_mode": "external\n\n---\n\n## notes\n\n- **45 concepts total** across 7 groups\n- all 4:5, default 1k size, gemini-image engine\n- variants: 15 gylden, 15 råhvid, 15 mixed (balanced for andromeda)\n- copy modes: 22 text-free, 18 embedded (5 annotated + 13 typography), 5 mixed\n- form-constraints baked into prompt builder — råhvid + mixed should now render correctly cylindrical\n- failed renders will be auto-retried before promoting\n\ncost estimate: 45 × $0.04 ≈ $1.80",
+  "headline": "Passer i alle slags stager",
+  "primary": "Stagelys på 2,2 cm — passer i lysestager du allerede har. Hjemmets stager bestemmer, ikke vores.",
+  "description": "Grenen",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "L11",
+  "template_ref": "frama-community-stools-interior",
+  "variant": "Gylden",
+  "copy_mode": "external",
+  "headline": "Bordet, før gæsterne",
+  "primary": "Fire stagelys, et bord, en aften. Bivoks brænder i 14 timer per lys uden duft eller drypning.",
+  "description": "Grenen Gylden, 4 stk",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/frama__0035d__community-stools-interior__crop.png"
+  ]
+}

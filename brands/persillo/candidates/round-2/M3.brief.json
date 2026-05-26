@@ -1,0 +1,13 @@
+{
+  "id": "M3",
+  "template_ref": "custom-annotated-pack-flatlay",
+  "variant": "Mixed",
+  "copy_mode": "embedded",
+  "headline": "Hver pakke, fire lys",
+  "primary": "Bland modeller, farver og størrelser frit. Tre pakker = 24% rabat, seks = 27%, tolv = 30%.",
+  "description": "Bland Selv",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg"
+  ]
+}

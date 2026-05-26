@@ -1,0 +1,14 @@
+{
+  "id": "I-C5",
+  "template_ref": "audo-eave-modular-sofa-dark",
+  "variant": "Mixed",
+  "copy_mode": "external",
+  "headline": "Bland selv. Spar selv.",
+  "primary": "Tre pakker giver 24% rabat. Seks pakker, 27%. Tolv pakker, 30%. Du blander Gylden og Råhvid frit i kurven.",
+  "description": "Bland Selv-rabat",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/audo__0046d__eave-modular-sofa-dark__crop.png"
+  ]
+}

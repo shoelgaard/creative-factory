@@ -1,0 +1,13 @@
+{
+  "id": "N1",
+  "template_ref": "stacked-packs-offer",
+  "variant": "Mixed",
+  "copy_mode": "embedded",
+  "headline": "Seks pakker, 27% billigere",
+  "primary": "Bland frit på tværs af Gylden og Råhvid. Mængderabat uden tilmelding, fragt fri på alle ordrer.",
+  "description": "Bland Selv",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg"
+  ]
+}
