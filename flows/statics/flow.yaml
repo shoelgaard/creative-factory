@@ -1,0 +1,43 @@
+name: statics
+display_name: Static ad images
+version: 0.1.0
+description: >
+  Bulk-generate brand-on static ads from a concepts markdown file. Each concept
+  defines a template-reference, product variant, visual brief, and copy. Engine:
+  gemini-image (Nano Banana Pro). Default aspect: 4:5 for Meta feed.
+
+engines:
+  - gemini-image
+
+cli:
+  command: cf statics gen
+  skill_trigger: /statics
+
+inputs:
+  - name: brand
+    required: true
+    type: slug
+  - name: concepts
+    required: true
+    type: path
+    description: Markdown file with H3-tagged concepts (see flows/statics/README.md).
+  - name: only
+    required: false
+    type: csv
+    description: Comma-separated concept IDs to render (default = all in file).
+  - name: aspect
+    required: false
+    type: enum
+    default: "4:5"
+  - name: size
+    required: false
+    type: enum
+    default: "2K"
+  - name: use-template-ref
+    required: false
+    type: bool
+    default: true
+    description: >
+      When true, the concept's template image is passed to the engine alongside
+      the product image (multi-ref). When false, template is ignored at engine
+      level (concept's visual_brief still describes the look in text).

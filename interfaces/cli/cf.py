@@ -35,6 +35,7 @@ from shared.cost_estimator import estimate
 from shared.gates import CreditEstimate, credit_gate
 from shared.run_log import RunEntry, append_run, now_iso, read_all
 from flows.editorial_cinematic.prompt_builder import build_prompt  # type: ignore
+from flows.statics.render import cmd_statics_gen  # type: ignore
 
 
 # Engine name (CLI flag) → (engine directory, default model id)
@@ -380,6 +381,7 @@ def cmd_doctor(args: argparse.Namespace) -> int:
     check("flows/ exists", (ROOT / "flows").is_dir())
     check("engines/gemini-veo/client.py", (ROOT / "engines" / "gemini-veo" / "client.py").exists())
     check("engines/fal/client.py", (ROOT / "engines" / "fal" / "client.py").exists())
+    check("engines/gemini-image/client.py", (ROOT / "engines" / "gemini-image" / "client.py").exists())
     check("brands/persillo/brand.md", (ROOT / "brands" / "persillo" / "brand.md").exists())
     check("logs/ ledger present", (ROOT / "logs").is_dir())
 
@@ -403,6 +405,22 @@ def build_parser() -> argparse.ArgumentParser:
     e_gen.add_argument("--aspect", default="9:16", choices=["9:16", "16:9", "1:1"])
     e_gen.add_argument("--duration", type=int, default=8, choices=[4, 6, 8])
     e_gen.set_defaults(func=cmd_editorial_gen)
+
+    # cf statics gen
+    statics = flow_sub.add_parser("statics", help="Static ad images (Nano Banana Pro)")
+    s_sub = statics.add_subparsers(dest="cmd", required=True)
+    s_gen = s_sub.add_parser("gen", help="Bulk-render statics from a concepts file.")
+    s_gen.add_argument("--brand", required=True, help="Brand slug. REQUIRED.")
+    s_gen.add_argument("--concepts", required=True, help="Path to concepts markdown file.")
+    s_gen.add_argument("--product", default=None, help="Product slug (inferred from filename if omitted).")
+    s_gen.add_argument("--only", default=None, help="CSV of concept IDs to render (overrides --only-checked).")
+    s_gen.add_argument("--only-checked", action="store_true", help="Only render concepts marked [x].")
+    s_gen.add_argument("--aspect", default="4:5", choices=["1:1", "4:5", "9:16", "16:9"])
+    s_gen.add_argument("--size", default="2K", choices=["512px", "1K", "2K", "4K"])
+    s_gen.add_argument("--use-template-ref", dest="use_template_ref", action="store_true", default=True)
+    s_gen.add_argument("--no-template-ref", dest="use_template_ref", action="store_false")
+    s_gen.add_argument("--parallel", type=int, default=8, help="Max concurrent renders.")
+    s_gen.set_defaults(func=cmd_statics_gen)
 
     # cf list
     lst = flow_sub.add_parser("list", help="List installed flows, engines, brands.")

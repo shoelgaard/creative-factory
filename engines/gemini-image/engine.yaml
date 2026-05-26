@@ -1,0 +1,27 @@
+name: gemini-image
+version: 0.1.0
+description: >
+  Wrapper around Google's Gemini image generation endpoint
+  (a.k.a. "Nano Banana"). Mirrors the pattern from
+  Persillo/Produkter/_System/Scripts/gemini_image_gen.py.
+
+base_url: https://generativelanguage.googleapis.com/v1beta
+auth:
+  method: api_key
+  env: GEMINI_API_KEY
+  header: x-goog-api-key
+
+models:
+  - id: gemini-3.1-flash-image-preview     # Nano Banana Pro
+    aspect_ratios: ["1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"]
+    sizes: ["512px", "1K", "2K", "4K"]
+    audio: none
+
+quirks:
+  - "Image preview endpoint is unstable — 500/503 errors are common. Wrapper retries with backoff."
+  - "Aspect ratio MUST be in supported list. 4:5 is the Meta-feed default for statics."
+  - "Multiple reference images are supported (up to 14). Each ref consumes part of the context budget."
+  - "Negative prompts (e.g. 'no people') work less reliably than positive framing. Prefer describing what you DO want."
+
+used_by:
+  - statics
