@@ -26,13 +26,13 @@ H3 header per concept, with these fields:
 
 ```bash
 # Render every concept in the file
-cf statics gen --brand persillo --concepts concepts/persillo/grenen-round-1.md
+cf statics gen --brand persillo --concepts brands/persillo/concepts/grenen-round-1.md
 
 # Render only specific concept IDs
-cf statics gen --brand persillo --concepts concepts/persillo/grenen-round-1.md --only A1,B2,C3
+cf statics gen --brand persillo --concepts brands/persillo/concepts/grenen-round-1.md --only A1,B2,C3
 
 # Render only concepts marked with [x]
-cf statics gen --brand persillo --concepts concepts/persillo/grenen-round-1.md --only-checked
+cf statics gen --brand persillo --concepts brands/persillo/concepts/grenen-round-1.md --only-checked
 
 # Disable passing the template as a direct engine ref (template stays as text-only inspiration)
 cf statics gen --brand persillo --concepts ... --no-template-ref

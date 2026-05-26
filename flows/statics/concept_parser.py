@@ -1,6 +1,6 @@
 """Parse the concept markdown file into structured Concept objects.
 
-The format expected is the one used in `concepts/persillo/grenen-round-1.md`:
+The format expected is the one used in `brands/persillo/concepts/grenen-round-1.md`:
 
     ### [ ] A1 · diptyque-large-candles-wooden-tier · Gylden
     **Visual:** ...

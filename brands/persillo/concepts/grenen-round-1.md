@@ -279,4 +279,4 @@ Meta ad manager). Begge varianter testes — Andromeda lærer hvad der virker.
 ## Next
 
 Du krydser af `[x]` på dem du vil have rendered i denne runde (anbefal 5-10 til at starte med — koster ca. $5-10 i Nano Banana credits).
-Når statics-flowet er bygget, kører jeg: `cf statics gen --brand persillo --concept-file concepts/persillo/grenen-round-1.md --only A1,B2,C2,D2,E2`
+Når statics-flowet er bygget, kører jeg: `cf statics gen --brand persillo --concept-file brands/persillo/concepts/grenen-round-1.md --only A1,B2,C2,D2,E2`
