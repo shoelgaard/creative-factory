@@ -14,6 +14,19 @@
 - Tekst-densitet (typography-tunge · minimal · text-free)
 - Mood (rolig morgen · intim aften · gave · hverdagsritual)
 
+**Templates = struktur-inspiration, ikke kopi.** Vi bygger hver ad fra bunden
+med Nano Banana. Templates fortæller kun *hvilket rum, hvilken vægt, hvilken
+typografi-balance* en god ad har — selve billedet er Persillo's, ikke en
+konkurrent-pastiche. Engine får: produkt-billede + brand DNA + USP-vinkel +
+visuel retning (mood, lys, materialer, komposition) + evt. copy-tekst der
+skal embeddes i billedet. Templates leveres ALDRIG som direkte ref-billede
+til Nano Banana — de er kun min interne note om hvilken kompositorisk struktur
+jeg sigter mod.
+
+**Copy-placering:** Hver concept markerer om copy er **embedded** (typografi
+i selve billedet) eller **external** (kun visual; headline/primary lægges på i
+Meta ad manager). Begge varianter testes — Andromeda lærer hvad der virker.
+
 ---
 
 ## Group A — Brændetid / longevity (14 timer per lys)
