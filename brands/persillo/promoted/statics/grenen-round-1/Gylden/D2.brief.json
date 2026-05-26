@@ -1,0 +1,12 @@
+{
+  "id": "D2",
+  "template_ref": "room-scene-table",
+  "variant": "Gylden",
+  "copy_mode": "external",
+  "headline": "Den slags lys, man tænder igen",
+  "primary": "Bivoks dufter af honning og blomster. Rolig flamme. Smukt både tændt og slukket.",
+  "description": "Grenen Gylden",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg"
+  ]
+}

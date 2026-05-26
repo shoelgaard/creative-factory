@@ -1,0 +1,12 @@
+{
+  "id": "C4",
+  "template_ref": "split-screen-offer",
+  "variant": "Gylden + Råhvid",
+  "copy_mode": "external",
+  "headline": "Bland Gylden og Råhvid",
+  "primary": "Begge farver, samme pris. Køb 12 pakker, spar 30%. Bland frit, fragt er fri.",
+  "description": "Spar op til 30%",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg"
+  ]
+}

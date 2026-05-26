@@ -76,13 +76,36 @@ _PRODUCT_FACTS = {
             "Sold in packs of 4. 14-hour burn time per candle. 100% pure beeswax, cotton wick."
         ),
         "proportions": (
-            "Grenen is EXTREMELY THIN AND TALL: 2.2 cm wide × 25 cm tall. Think of a "
-            "chopstick or long pencil. Cylindrical. NEVER render it as a chunky pillar candle."
+            "GRENEN PHYSICAL FORM — render this exactly, deviation = unusable:\n"
+            "- A STRAIGHT CYLINDER: 2.2 cm diameter at the base, 2.2 cm diameter at the top. "
+            "  The candle has the SAME diameter from bottom to top. Like a chopstick, like a pencil.\n"
+            "- The candle is NEVER tapered. It does NOT get narrower toward the top. "
+            "  It does NOT have a conical, dome, dipped-pencil, or seashell (konkylie) shape at the top.\n"
+            "- The TOP is FLAT — a cleanly cut horizontal disc. NOT rounded, NOT domed, NOT pointed.\n"
+            "- A SINGLE white cotton wick exits the centre of the flat top. ONE wick, at the TOP ONLY.\n"
+            "  Never a wick at the bottom. Never wicks at both ends.\n"
+            "- Height ~25 cm — at least 11x as tall as it is wide. Truly slender.\n"
+            "- When showing a pack: EXACTLY 4 candles. Never 3. Never 5. Never 6. FOUR."
         ),
         "variants": {
-            "gylden": "warm honey-amber colour (natural beeswax, the deeper gold variant)",
-            "raahvid": "cool ivory colour (the lighter, cooler natural beeswax variant)",
-            "mixed": "both warm honey-amber (Gylden) and cool ivory (Råhvid) variants present in the same composition",
+            "gylden": (
+                "the **Gylden** variant — warm honey-amber colour, the deeper golden natural "
+                "beeswax. Slightly glossy translucent surface where light passes through. "
+                "Colour reads as warm amber-gold, like dark honey."
+            ),
+            "raahvid": (
+                "the **Råhvid** variant — cool ivory colour, the lighter cooler natural beeswax. "
+                "Soft matte surface. Colour reads as warm off-white / cream-ivory, NEVER pure white, "
+                "NEVER yellow, NEVER honey. Think the cream colour of unbleached linen or natural "
+                "wool. The candle is the same cylindrical shape as Gylden (flat top, single wick, "
+                "straight sides, 2.2 × 25 cm) — only the colour differs."
+            ),
+            "mixed": (
+                "BOTH variants present in the same composition: the warm honey-amber Gylden tapers "
+                "AND the cool cream-ivory Råhvid tapers. Both have identical cylindrical form "
+                "(flat top, single wick, straight sides). Show them side by side or interleaved "
+                "so the colour contrast is clearly visible."
+            ),
         },
     },
 }
@@ -141,38 +164,46 @@ def _copy_block(concept: Concept) -> str:
     )
 
 
-def _find_product_image(
+def _find_product_images(
     project_root: pathlib.Path, brand_slug: str, product_slug: str, variant: str
-) -> pathlib.Path:
-    """Find the hero product image for the given variant.
+) -> list[pathlib.Path]:
+    """Return product hero refs for the variant. For Mixed: both Gylden + Råhvid heroes.
 
-    Variants in folders: 'Gylden' and 'Råhvid'. Filename: 'slot1_hero.jpg'.
+    Each variant folder is 'Gylden' or 'Råhvid'. Hero file: 'slot1_hero.jpg'.
+    For Mixed we also include slot4_material.jpg if present (shows wax texture clearly).
     """
     base = project_root / "brands" / brand_slug / "references" / "products"
-    # Folder name is the family name capitalised in Sylvester's existing structure
     family_capitalised = product_slug.capitalize()
     fam_dir = base / family_capitalised
     if not fam_dir.exists():
-        # try lowercase
         fam_dir = base / product_slug.lower()
     if not fam_dir.exists():
         raise FileNotFoundError(f"No product folder at {base}/{family_capitalised} or {product_slug}")
 
     v = variant.strip().lower().replace("+", " ").replace("å", "aa")
-    if "gylden" in v and ("raahvid" in v or "mixed" in v):
-        chosen = "Gylden"  # default to Gylden for mixed; flow will need both refs eventually
-    elif "raahvid" in v or "ra" in v:
-        chosen = "Råhvid"
-    else:
-        chosen = "Gylden"
+    is_mixed = ("gylden" in v and ("raahvid" in v or "ra " in v or v.startswith("ra"))) or "mixed" in v
+    is_raahvid = (not is_mixed) and ("raahvid" in v or v.startswith("ra"))
+    chosen_variants = ["Gylden", "Råhvid"] if is_mixed else (["Råhvid"] if is_raahvid else ["Gylden"])
 
-    candidate = fam_dir / chosen / "slot1_hero.jpg"
-    if candidate.exists():
-        return candidate
-    # fallback to any jpg in variant folder
-    for p in (fam_dir / chosen).glob("*.jpg"):
-        return p
-    raise FileNotFoundError(f"No product image found under {fam_dir / chosen}")
+    refs: list[pathlib.Path] = []
+    for chosen in chosen_variants:
+        hero = fam_dir / chosen / "slot1_hero.jpg"
+        if hero.exists():
+            refs.append(hero)
+            continue
+        for p in (fam_dir / chosen).glob("*.jpg"):
+            refs.append(p)
+            break
+    if not refs:
+        raise FileNotFoundError(f"No product images found under {fam_dir}")
+    return refs
+
+
+# Backwards-compatible single-ref accessor
+def _find_product_image(
+    project_root: pathlib.Path, brand_slug: str, product_slug: str, variant: str
+) -> pathlib.Path:
+    return _find_product_images(project_root, brand_slug, product_slug, variant)[0]
 
 
 def _find_template_image(project_root: pathlib.Path, brand_slug: str, template_ref: str) -> pathlib.Path | None:
@@ -220,10 +251,10 @@ def build_for_concept(
     aspect: str = "4:5",
 ) -> BuiltPrompt:
     product_block, proportions = _product_block(product_slug, concept.variant)
-    product_img = _find_product_image(project_root, brand.slug, product_slug, concept.variant)
+    product_imgs = _find_product_images(project_root, brand.slug, product_slug, concept.variant)
     template_img = _find_template_image(project_root, brand.slug, concept.template_ref)
 
-    refs = [product_img]
+    refs = list(product_imgs)  # 1 ref for Gylden/Råhvid, 2 refs for Mixed
     if use_template_ref and template_img:
         refs.append(template_img)
 

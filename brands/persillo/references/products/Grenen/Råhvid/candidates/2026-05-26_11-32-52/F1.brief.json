@@ -1,0 +1,13 @@
+{
+  "id": "F1",
+  "template_ref": "frama-community-stools-interior",
+  "variant": "Råhvid",
+  "copy_mode": "external",
+  "headline": "En aften, fire lys",
+  "primary": "Stagelys-pakken med 4. 14 timers brændetid per lys. Tænd alle fire og lad aftenen begynde.",
+  "description": "Grenen Råhvid",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/frama__0035d__community-stools-interior__crop.png"
+  ]
+}

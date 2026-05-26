@@ -1,0 +1,13 @@
+{
+  "id": "D4",
+  "template_ref": "audo-bookshelf-wooden-interior",
+  "variant": "Råhvid",
+  "copy_mode": "external",
+  "headline": "En time, kun for dig",
+  "primary": "14 timers brændetid. Tænd et stagelys, læn dig tilbage. Bivoks brænder roligt og rent.",
+  "description": "Råhvid bivoks-stagelys",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Råhvid/slot1_hero.jpg",
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/templates/audo__0047d__bookshelf-wooden-interior__crop.png"
+  ]
+}

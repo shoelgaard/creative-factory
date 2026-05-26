@@ -1,0 +1,12 @@
+{
+  "id": "F5",
+  "template_ref": "refill-pack-repurchase",
+  "variant": "Gylden",
+  "copy_mode": "external",
+  "headline": "Tid til en ny pakke",
+  "primary": "4 stagelys per pakke. Køb 3 pakker, spar 24%. Fri fragt, rabat fratrækkes automatisk.",
+  "description": "Bland Selv-rabat\n\n---\n\n## Group G — Bonus: 5 ekstra \"wild card\" forsøg",
+  "refs": [
+    "/Users/sylvesterhoelgaard/Library/CloudStorage/OneDrive-ADClient/AI agents HQ/Creative Factory/brands/persillo/references/products/Grenen/Gylden/slot1_hero.jpg"
+  ]
+}
