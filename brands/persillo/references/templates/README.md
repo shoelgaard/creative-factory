@@ -8,12 +8,27 @@ with your product + USP.
 
 ```
 templates/
-├── <short-name>.jpg     — the template image (you download)
-└── <short-name>.md      — optional notes: what hook, what angle, why it works
+├── <brand>__<days>d__<short-desc>.png       — full screenshot from Meta Ad Library
+└── <brand>__<days>d__<short-desc>__crop.png — auto-generated, just the ad creative
 ```
 
-`<short-name>` examples: `aesop-hand-balm-typography`, `frama-room-scene`,
-`diptyque-product-on-marble`.
+- `<brand>` lowercase, no spaces (aesop, frama, byredo, lelabo, audo, otherland, diptyque, trudon, tekla, broste, ...)
+- `<days>` zero-padded to 4 digits (e.g. `0379d`) — days the ad has been running per Ad Library timestamp. Longest-running ads = best performers.
+- `<short-desc>` hyphenated lowercase, describes the visual (`bal-dafrique-red-velvet`, `chair-01-wooden-staggered`).
+
+`ls` sorts oldest-active ads to bottom because of zero-padding — top of the list is the worst performers, bottom is the proven winners.
+
+## Auto-crop
+
+After dropping new screenshots in this folder, run:
+
+```bash
+python3 tools/crop_meta_ad.py brands/persillo/references/templates/
+```
+
+This generates `<name>__crop.png` next to each `<name>.png`, with the Meta UI
+(Active badge, library ID, ad copy, Shop Now button, thumbnails) removed.
+Statics-flow only ingests `__crop.png` versions.
 
 ## template.md (optional, but useful for bulk runs)
 
