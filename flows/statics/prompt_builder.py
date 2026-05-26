@@ -241,6 +241,36 @@ def _find_template_image(project_root: pathlib.Path, brand_slug: str, template_r
     return None
 
 
+_PACK_KEYWORDS = (
+    "pack", "pakke", "package", "boxed", "unbox", "gift",
+    "stack", "stacked", "stak", "abundance", "refill",
+)
+
+
+def _find_pack_refs(
+    project_root: pathlib.Path, brand_slug: str, product_slug: str, variant: str
+) -> list[pathlib.Path]:
+    """Return up to 2 package/abundance refs from the product's first variant folder."""
+    base = project_root / "brands" / brand_slug / "references" / "products"
+    family = product_slug.capitalize()
+    fam_dir = base / family
+    if not fam_dir.exists():
+        return []
+    v = variant.strip().lower()
+    if "raahvid" in v.replace("å", "aa") or v.startswith("rå"):
+        variant_dir = fam_dir / "Råhvid"
+    else:
+        variant_dir = fam_dir / "Gylden"
+    refs = []
+    for name in ("vol_3x.jpg", "vol_1x.jpg", "slot8_abundance.jpg"):
+        p = variant_dir / name
+        if p.exists():
+            refs.append(p)
+        if len(refs) >= 2:
+            break
+    return refs
+
+
 def build_for_concept(
     *,
     brand: Brand,
@@ -255,6 +285,16 @@ def build_for_concept(
     template_img = _find_template_image(project_root, brand.slug, concept.template_ref)
 
     refs = list(product_imgs)  # 1 ref for Gylden/Råhvid, 2 refs for Mixed
+
+    # If the visual brief talks about the pack/box/gift, add pack refs
+    brief_lower = (concept.visual + " " + concept.headline + " " + concept.primary).lower()
+    if any(k in brief_lower for k in _PACK_KEYWORDS):
+        pack_refs = _find_pack_refs(project_root, brand.slug, product_slug, concept.variant)
+        # Avoid duplicates if pack ref happens to equal a product ref
+        for pr in pack_refs:
+            if pr not in refs:
+                refs.append(pr)
+
     if use_template_ref and template_img:
         refs.append(template_img)
 
