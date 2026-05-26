@@ -10,8 +10,20 @@ Distinct from `brand.md`, which is the durable visual + motion DNA.
 - `default_engine`: veo3
 - `default_aspect`: 9:16
 - `default_duration`: 8
+- `statics_default_aspect`: 4:5      # Meta feed primary, expand other ratios after winners are picked
 - `max_cost_per_run_usd`: 2.50
 - `max_cost_per_day_usd`: 25.00
+
+## Offer (Bland Selv by Persillo)
+
+- 3 pakker → 24% rabat
+- 6 pakker → 27% rabat
+- 12 pakker → 30% rabat
+- Bland frit på tværs af modeller, farver, størrelser
+- Fri fragt på alle ordrer
+- Rabat fratrækkes automatisk i kurven
+
+Full source text in `references/usps/brand.md`.
 
 ## Preferred terms (Persillo dictionary)
 
