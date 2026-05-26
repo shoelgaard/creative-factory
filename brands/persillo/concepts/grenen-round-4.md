@@ -1,0 +1,301 @@
+# Grenen — Statics Round 4 (max template variation, no embedded copy)
+
+**Format:** 4:5 (1080 × 1350) · **Brand:** persillo · **Product:** Grenen · **Engine:** gemini-image
+
+Round 3 design intent (per user feedback after round 2):
+- ALL 49 templates traversed (round 1+2 used only 33)
+- Every template × Gylden + Råhvid — balanced variant exposure for Andromeda
+- NO embedded copy on images — Persillo copy added on the Meta ad-manager layer
+- Composition rotated across the set (single / group-of-4 / close-up / flat-lay / in-room / lit / pack)
+- Form-constraints enforced by prompt_builder (cylinder, flat top, 1 wick, exactly 4 per pack)
+- Pack-themed templates automatically receive package reference images
+
+---
+
+### [ ] R4-001 · aesop-solaris-hand-serum-on-fan · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-002 · aesop-solaris-hand-serum-on-fan · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-003 · aesop-resurrection-duet-hand-wash-balm · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-004 · aesop-resurrection-duet-hand-wash-balm · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-005 · aesop-from-aroma-world-unfolds-diffusers · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-006 · aesop-from-aroma-world-unfolds-diffusers · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-007 · aesop-hand-body-care-three-boxes · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-008 · aesop-hand-body-care-three-boxes · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-009 · aesop-cherished-resurrection-balm-trio · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-010 · aesop-cherished-resurrection-balm-trio · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-011 · aesop-aromas-to-uplift-ptolemy-alabaster · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-012 · aesop-aromas-to-uplift-ptolemy-alabaster · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-013 · aesop-evocative-scents-diffusers-water · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-014 · aesop-evocative-scents-diffusers-water · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-015 · audo-bookshelf-chair-warm-interior · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-016 · audo-bookshelf-chair-warm-interior · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-017 · audo-brasilia-lounge-chair-sheepskin · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-018 · audo-brasilia-lounge-chair-sheepskin · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-019 · audo-eave-modular-sofa-dark · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-020 · audo-eave-modular-sofa-dark · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-021 · audo-bookshelf-wooden-interior · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-022 · audo-bookshelf-wooden-interior · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-023 · audo-carrie-portable-lamp · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-024 · audo-carrie-portable-lamp · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-025 · broste-autumn-light-interior-flowers · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-026 · broste-autumn-light-interior-flowers · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-027 · byredo-bal-dafrique-red-typography · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-028 · byredo-bal-dafrique-red-typography · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-029 · byredo-bal-dafrique-red-velvet · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-030 · byredo-bal-dafrique-red-velvet · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-031 · byredo-hands-holding-bal-dafrique · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-032 · byredo-hands-holding-bal-dafrique · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-033 · byredo-vials-on-green-texture · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-034 · byredo-vials-on-green-texture · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-035 · byredo-black-saffron-absolu-vials-wooden · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-036 · byredo-black-saffron-absolu-vials-wooden · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-037 · byredo-la-grande-decouverte-vials-wooden · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-038 · byredo-la-grande-decouverte-vials-wooden · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-039 · byredo-blanche-perfume-lipstick-blue · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-040 · byredo-blanche-perfume-lipstick-blue · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-041 · byredo-discovery-set-nomade-boxed · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-042 · byredo-discovery-set-nomade-boxed · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.
+
+### [ ] R4-043 · byredo-bal-dafrique-body-japanese-red · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-044 · byredo-bal-dafrique-body-japanese-red · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-045 · diptyque-fleur-de-peau-bottle-flowers · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-046 · diptyque-fleur-de-peau-bottle-flowers · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-047 · diptyque-leau-papier-white-mushroom · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-048 · diptyque-leau-papier-white-mushroom · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-049 · diptyque-most-loved-scents-stacked · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-050 · diptyque-most-loved-scents-stacked · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-051 · diptyque-hand-soap-stack-lavender · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-052 · diptyque-hand-soap-stack-lavender · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.
+
+### [ ] R4-053 · diptyque-large-candles-wooden-tier · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-054 · diptyque-large-candles-wooden-tier · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-055 · diptyque-reed-diffusers-glass-row · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-056 · diptyque-reed-diffusers-glass-row · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-057 · frama-10off-shelf-interior · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-058 · frama-10off-shelf-interior · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-059 · frama-community-stools-interior · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-060 · frama-community-stools-interior · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-061 · frama-chair-01-wooden-staggered · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-062 · frama-chair-01-wooden-staggered · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-063 · lelabo-matcha-trio-dark-wood · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-064 · lelabo-matcha-trio-dark-wood · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-065 · lelabo-bottles-row-on-shelf · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-066 · lelabo-bottles-row-on-shelf · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-067 · lelabo-calone-17-perfume-candle-shelf · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-068 · lelabo-calone-17-perfume-candle-shelf · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-069 · lelabo-discovery-sets-tiled-corner · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-070 · lelabo-discovery-sets-tiled-corner · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.
+
+### [ ] R4-071 · lelabo-hand-crafted-candles-wooden-box · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-072 · lelabo-hand-crafted-candles-wooden-box · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-073 · lelabo-spritz-refill-repeat-hand-pouring · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-074 · lelabo-spritz-refill-repeat-hand-pouring · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.
+
+### [ ] R4-075 · lelabo-wash-pomade-repeat · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-076 · lelabo-wash-pomade-repeat · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-077 · otherland-cardamom-milk-soft-typography · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-078 · otherland-cardamom-milk-soft-typography · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.
+
+### [ ] R4-079 · otherland-dopamine-decor-anisainside-collab · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-080 · otherland-dopamine-decor-anisainside-collab · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-081 · otherland-annotated-product-purple-gradient · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-082 · otherland-annotated-product-purple-gradient · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-083 · otherland-daybed-floral-pink-silk · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-084 · otherland-daybed-floral-pink-silk · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-085 · otherland-annotated-product-terracotta · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-086 · otherland-annotated-product-terracotta · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Tight close-up of ONE Grenen taper — the flat top, the single wick, the wax texture clearly visible. Dark moody backdrop or soft warm gradient.
+
+### [ ] R4-087 · otherland-set-the-mood-pears-natural · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Top-down flat-lay of 3 Grenen tapers lying loosely on a travertine slab, slight asymmetry, soft morning light.
+
+### [ ] R4-088 · otherland-set-the-mood-pears-natural · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An interior scene — a side table or dining table — with 2-3 Grenen tapers lit in simple matte ceramic holders. Quiet domestic mood, warm side light.
+
+### [ ] R4-089 · otherland-fallen-fir-refill-holiday-table · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). An open Persillo package on a travertine surface, showing the 4 Grenen tapers nestled inside in tissue paper. Soft side light, no extra props beyond the package and tapers.
+
+### [ ] R4-090 · otherland-fallen-fir-refill-holiday-table · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Two Persillo packages stacked on a warm-grey limewashed surface, beside one taper standing upright next to the stack. Quiet editorial mood.
+
+### [ ] R4-091 · tekla-bedding-organic-cotton-typography · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). ONE Grenen taper LIT in a simple matte ceramic holder, single stable quiet flame. Dark or muted backdrop so the warm flame is the focal point.
+
+### [ ] R4-092 · tekla-bedding-organic-cotton-typography · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). EXACTLY FOUR Grenen tapers in a horizontal row on a long travertine slab, evenly spaced, identical holders, soft Nordic side light from the left.
+
+### [ ] R4-093 · trudon-carmen-amber-bottle-sand · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show ONE single Grenen taper in a simple matte ceramic holder, centred and unlit, soft Nordic side light from the left.
+
+### [ ] R4-094 · trudon-carmen-amber-bottle-sand · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Show EXACTLY FOUR Grenen tapers as a tight group in identical simple matte ceramic holders, evenly spaced, soft side light, all candles same height with flat tops.
+
+### [ ] R4-095 · trudon-carmen-black-bottle-new-collection · Gylden
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Gylden variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). A Persillo package half-opened on a linen tørklæde as if being unwrapped — 4 Grenen tapers visible inside. Morning daylight.
+
+### [ ] R4-096 · trudon-carmen-black-bottle-new-collection · Råhvid
+**Visual:** Take the compositional structure, lighting mood and typography balance from the referenced ad as inspiration. Render Persillo Grenen tapers in the Råhvid variant following the Persillo brand grammar (editorial still life, warm-grey limewashed wall or travertine surface, soft Nordic side light, no people, no chrome, no glossy plastic). Three Persillo packages stacked vertically against a warm-grey limewashed wall, dried lavendel sprig beside them on travertine. Soft side light.

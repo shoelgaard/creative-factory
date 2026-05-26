@@ -29,41 +29,52 @@ class BuiltPrompt:
 
 
 _PROMPT_TEMPLATE = """\
-You are generating a single static ad creative for {brand_name}, a Danish
-premium beeswax-candle brand. Editorial photography realism. Quiet, lavmælt,
-Kinfolk/Frama/Aesop visual language.
+TASK: faithful PRODUCT SWAP into an existing static ad template.
 
-PRODUCT (subject of the ad, see reference image #1):
-{product_block}
+REFERENCE IMAGE #1 (product): Persillo Grenen tapers — see for variant colour,
+material texture, proportions. This product must appear in the final image.
 
-VISUAL BRIEF FOR THIS AD:
+REFERENCE IMAGE #2 (template, if present): a competing brand's static ad. This
+is the EXACT scene we are recreating. Reproduce it faithfully:
+- same room / surface / backdrop / wall
+- same props (books, fabrics, plants, sand, water, tiles, sofa, shelves, etc.)
+- same lighting direction and lighting mood
+- same color palette — if the template is dark moody Aesop black, KEEP that
+  black. If it's Byredo red velvet, KEEP that red. If it's Otherland holiday
+  pine on a wooden table, KEEP that pine and wooden table.
+- same camera angle, framing, depth
+- same typography PLACEMENT zones (but with blank or removed competing-brand text)
+
+THE ONE THING TO CHANGE:
+Whatever product appears in the template (perfume bottle, jar candle, lotion
+tube, soap, etc.) becomes Persillo Grenen {variant_short} tapers. Match the
+same number of products / placement / orientation as the template wherever
+possible.
+
+PRODUCT — {variant_short}:
+{variant_desc}
+
+PRODUCT PHYSICAL FORM (must hold even when the template style is very different):
+{proportions_block}
+
+OPTIONAL composition hint from concept brief:
 {visual_brief}
 
-{template_block}
-
-BRAND VISUAL GRAMMAR (must follow):
-- Editorial still-life, lavmælt nordisk lys, magasin-kvalitet
-- Materials: travertine, raw oak, linen, matte off-white ceramic, brushed brass
-- Backdrop: warm muted-grey limewashed plaster, subtle brush-mottling — NEVER pure white catalog background
-- Light: soft directional Nordic daylight from the left, ~4000K, gentle long shadows
-- Mood: quiet luxury, intimate, slow
-
-STRICT NO-GO LIST (do not include):
-- No people, no hands, no body parts
-- No glossy plastic surfaces, no chrome
-- No honeycombs, honey drips, bees (source story told via dried Nordic flora, never literally)
-- No flickering/blown flames — only stable, quiet flame if lit
-- No "blurred background" — use specific named props (linen books, ceramic cup, dried lavender)
-- No "håndlavet i Danmark" / "made in Denmark" claims anywhere
-
-PRODUCT PROPORTIONS (critical — Gemini drifts toward generic):
-{proportions_block}
+NO-GO regardless of template:
+- No people, no hands, no body parts (if template had a person, replace with the
+  candle in the same position)
+- No honeycomb / bees / honey
+- No competing brand's logo, name, or readable label — those zones go blank
+- No "håndlavet i Danmark" / "made in Denmark" anywhere
+- No flickering flame (if lit, the flame is stable and quiet)
+- DO NOT default to travertine + limewashed warm-grey + dried lavender if the
+  template doesn't have those. The template's surfaces and props win.
 
 {copy_block}
 
-OUTPUT: a single still image, aspect ratio {aspect}, editorial photography
-realism, high-resolution detail, natural color rendering. The product must be
-the focal subject and faithfully resemble reference image #1.
+OUTPUT: a single still image, aspect ratio {aspect}, photographic realism
+faithful to the TEMPLATE's visual style. The product is Persillo Grenen
+({variant_short}).
 """.strip()
 
 
@@ -297,11 +308,24 @@ def build_for_concept(
     if use_template_ref and template_img:
         refs.append(template_img)
 
+    # Normalise variant for the template
+    v_lower = concept.variant.strip().lower().replace("å", "aa")
+    if ("gylden" in v_lower and "raahvid" in v_lower) or "mixed" in v_lower:
+        variant_short = "Gylden + Råhvid"
+    elif "raahvid" in v_lower or v_lower.startswith("ra"):
+        variant_short = "Råhvid"
+    else:
+        variant_short = "Gylden"
+
+    facts = _PRODUCT_FACTS.get(product_slug.lower(), {})
+    variants = facts.get("variants", {})
+    variant_key = "mixed" if "Gylden + Råhvid" in variant_short else ("raahvid" if variant_short == "Råhvid" else "gylden")
+    variant_desc = variants.get(variant_key, product_block)
+
     prompt = _PROMPT_TEMPLATE.format(
-        brand_name=brand.name,
-        product_block=product_block,
-        visual_brief=concept.visual,
-        template_block=_template_block(template_img, use_template_ref),
+        variant_short=variant_short,
+        variant_desc=variant_desc,
+        visual_brief=concept.visual or "(none — follow the template faithfully)",
         proportions_block=proportions,
         copy_block=_copy_block(concept),
         aspect=aspect,
