@@ -229,18 +229,40 @@ def cmd_statics_gen(args: argparse.Namespace) -> int:
             )
             return (concept.id, "failed", None, elapsed, str(exc))
 
-    n_workers = min(args.parallel, len(built))
-    print(f"[statics] dispatching {len(built)} renders, {n_workers} parallel workers")
-    results = []
-    with cf.ThreadPoolExecutor(max_workers=n_workers) as pool:
-        futs = [pool.submit(_one, c, bp) for c, bp in built]
-        for fut in cf.as_completed(futs):
-            r = fut.result()
-            results.append(r)
-            if r[1] == "ok":
-                print(f"[statics] {r[0]} OK ({r[3]}s) → {r[2].name}")
-            else:
-                print(f"[statics] {r[0]} FAILED ({r[3]}s): {r[4]}", file=sys.stderr)
+    def _run_pass(to_run, label, max_workers):
+        n_workers = min(max_workers, len(to_run))
+        print(f"[statics] {label}: dispatching {len(to_run)} renders, {n_workers} parallel")
+        pass_results = []
+        with cf.ThreadPoolExecutor(max_workers=n_workers) as pool:
+            futs = [pool.submit(_one, c, bp) for c, bp in to_run]
+            for fut in cf.as_completed(futs):
+                r = fut.result()
+                pass_results.append(r)
+                if r[1] == "ok":
+                    print(f"[statics] {r[0]} OK ({r[3]}s) → {r[2].name}")
+                else:
+                    print(f"[statics] {r[0]} FAILED ({r[3]}s): {r[4]}", file=sys.stderr)
+        return pass_results
+
+    # First pass — full parallel
+    results = _run_pass(built, "pass-1", args.parallel)
+
+    # Retry passes — lower parallel to reduce rate-limit contention
+    max_retries = args.max_retries
+    for attempt in range(2, max_retries + 2):
+        failed_ids = {r[0] for r in results if r[1] != "ok"}
+        if not failed_ids:
+            break
+        retry_set = [(c, bp) for c, bp in built if c.id in failed_ids]
+        print(f"\n[statics] {len(failed_ids)} failed — retry pass {attempt}/{max_retries + 1}")
+        retry_results = _run_pass(retry_set, f"pass-{attempt}", max(2, args.parallel // 2))
+        # Merge: keep best (ok wins over failed) for each id
+        result_map = {r[0]: r for r in results}
+        for r in retry_results:
+            cur = result_map.get(r[0])
+            if cur is None or cur[1] != "ok":
+                result_map[r[0]] = r
+        results = list(result_map.values())
 
     n_ok = sum(1 for r in results if r[1] == "ok")
     n_fail = len(results) - n_ok

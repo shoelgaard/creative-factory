@@ -420,6 +420,7 @@ def build_parser() -> argparse.ArgumentParser:
     s_gen.add_argument("--use-template-ref", dest="use_template_ref", action="store_true", default=True)
     s_gen.add_argument("--no-template-ref", dest="use_template_ref", action="store_false")
     s_gen.add_argument("--parallel", type=int, default=8, help="Max concurrent renders.")
+    s_gen.add_argument("--max-retries", dest="max_retries", type=int, default=2, help="Auto-retry failed IDs this many times.")
     s_gen.set_defaults(func=cmd_statics_gen)
 
     # cf list
